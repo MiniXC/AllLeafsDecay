@@ -6,7 +6,7 @@
 
     <groupId>io.github.minixc</groupId>
     <artifactId>AllLeafsDecay</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>0.0.4-SNAPSHOT</version>
 
     <build>
         <plugins>

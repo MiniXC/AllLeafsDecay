@@ -5,6 +5,7 @@ import org.bukkit.block.Block;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.HandlerList;
 import org.bukkit.event.Listener;
+import org.bukkit.event.block.BlockPhysicsEvent;
 import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -17,9 +18,9 @@ public final class AllLeafsDecay extends JavaPlugin implements Listener {
     }
 
     @EventHandler
-    public void leafPlaced(BlockPlaceEvent event) {
+    public void leafPlaced(BlockPhysicsEvent event) {
         Block block = event.getBlock();
-        if (block.getType() == Material.LEAVES) {
+        if (block.getType() == Material.LEAVES || block.getType() == Material.LEAVES_2) {
             getLogger().info(block.getData() + "");
         }
     }
